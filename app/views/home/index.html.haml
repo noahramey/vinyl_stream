@@ -1,0 +1,14 @@
+%nav.blue{:role => "navigation"}
+  .nav-wrapper.container
+    %a#logo-container.brand-logo{:href => "#"} Logo
+    %ul.right.hide-on-med-and-down
+      %li
+        %a{:href => "#"} Navbar Link
+    %ul#nav-mobile.side-nav
+      %li
+        %a{:href => "#"} Navbar Link
+    %a.button-collapse{"data-activates" => "nav-mobile", :href => "#"}
+      %i.material-icons menu
+.row
+  .col.s12
+    = image_tag 'https://hd.unsplash.com/photo-1470229722913-7c0e2dbbafd3'
