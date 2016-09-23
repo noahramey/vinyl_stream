@@ -1,6 +1,6 @@
 # Vinyl Stream (Selling Everything Music)
 
-This project is a web application built using the React framework with a Rails backend. It could be used to buy and sell various music paraphernalia.
+Started yesterday. I ran into quite a speedbump on my Spotify project. I found that I am unable to query the Spotify library based on a track's audio features (danceability, acousticness, etc.), and that defeats the purpose of recommendations. So I decided to pivot entirely. This project is a web application built using the React framework with a Rails backend. It could be used to buy and sell various music paraphernalia, such as albums, posters, vinyls, and more. I aim to have user authentication, ajax calls through react, and basic CRUD for my models done by the end of this weekend. (9/23 - 9/25) 
 
 ### User Stories
 
