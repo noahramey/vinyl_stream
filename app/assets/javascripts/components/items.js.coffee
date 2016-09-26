@@ -6,14 +6,12 @@
     items: []
 
   addItem: (item) ->
-    items = @state.items.slice()
-    items.push item
+    items = React.addons.update(@state.items, { $push: [item] })
     @setState items: items
 
   deleteItem: (item) ->
-    items = @state.items.slice()
-    index = items.indexOf item
-    items.splice index, 1
+    index = @state.items.indexOf item
+    items = React.addons.update(@state.items, { $splice: [[index, 1]] })
     @replaceState items: items
 
   render: ->
