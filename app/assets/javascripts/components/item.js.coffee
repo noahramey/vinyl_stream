@@ -1,4 +1,13 @@
 @Item = React.createClass
+  handleDelete: (e) ->
+    e.preventDefault()
+    $.ajax
+      method: 'DELETE'
+      url: "/items/#{ @props.item.id }"
+      dataType: 'JSON'
+      success: () =>
+        @props.handleDeleteItem @props.item
+
   render: ->
     React.DOM.li
       className: 'collection-item avatar'
@@ -12,6 +21,9 @@
       React.DOM.p null, priceFormat(@props.item.price)
       React.DOM.p
         className: 'secondary-content'
-        React.DOM.i
-          className: 'material-icons'
-          'grade'
+        React.DOM.a
+          className: 'btn red'
+          onClick: @handleDelete
+          React.DOM.i
+            className: 'material-icons'
+            'delete'
