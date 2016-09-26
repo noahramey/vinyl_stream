@@ -1,12 +1,12 @@
 %nav.blue{:role => "navigation"}
   .nav-wrapper.container
-    %a#logo-container.brand-logo{:href => "#"} Logo
+    %a#logo-container.brand-logo{:href => "#"} VinylStream
     %ul.right.hide-on-med-and-down
       %li
-        %a{:href => "#"} Navbar Link
+        = link_to 'Items', items_path
     %ul#nav-mobile.side-nav
       %li
-        %a{:href => "#"} Navbar Link
+        = link_to 'Items', items_path
     %a.button-collapse{"data-activates" => "nav-mobile", :href => "#"}
       %i.material-icons menu
 .row
