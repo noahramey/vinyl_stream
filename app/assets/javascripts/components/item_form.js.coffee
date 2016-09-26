@@ -40,6 +40,12 @@
         name: 'category'
         value: @state.category
         onChange: @handleChange
+      React.DOM.input
+        type: 'number'
+        placeholder: 'Price'
+        name: 'price'
+        value: @state.price
+        onChange: @handleChange
       React.DOM.button
         type: 'submit'
         className: 'btn'
