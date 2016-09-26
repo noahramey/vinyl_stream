@@ -1,5 +1,6 @@
 class Account < ApplicationRecord
   belongs_to :user
+  has_many :items
 
   has_attached_file :avatar, styles: {
     thumb: '100x100>',
