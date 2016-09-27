@@ -1,2 +1,25 @@
 .container
-  = react_component 'Account', { data: @account }
+  .col.s12.m8.offset-m2.l6.offset-13
+    .card-panel.grey.lighten-5.z-depth-1
+      .row.valign-wrapper
+        .col.s2
+          = image_tag @account.avatar.url(:square), { class: 'circle responsive-img' }
+        .col.s10
+          %h5.black-text= @account.name
+          %p= @account.about
+  .col.s12.m8.offset-m2.l6.offset-13
+    .card-panel.grey.lighten-4.z-depth-1
+      .row.valign-wrapper
+        %h5.right-align Items for Sale
+        -if @account.items.any?
+          - @account.items.each do |item|
+            .col.s12
+              %ul.collection
+                %li.collection-item.avatar
+                  %i.material-icons.circle.red play_arrow
+                  %span.title= item.name
+                  %p= item.description
+                  %p $ #{ item.price }
+                  %p.secondary-content
+                    %a.btn.green
+                      %i.material-icons shopping_cart

@@ -5,6 +5,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
+    @item.account_id = current_user.account.id
     if @item.save
       render json: @item
     else

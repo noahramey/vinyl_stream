@@ -20,6 +20,6 @@ class AccountsController < ApplicationController
   private
 
   def account_params
-    params.require(:account).permit(:name, :about, :address)
+    params.require(:account).permit(:name, :about, :address, :avatar)
   end
 end

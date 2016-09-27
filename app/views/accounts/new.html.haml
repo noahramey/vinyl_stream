@@ -1,2 +1,8 @@
 .container
-  = react_component 'NewAccount', { data: @account }
+  %h3 Fill in the following information.
+  = form_for(@account, mutlipart: true) do |f|
+    = f.text_field :name, { placeholder: 'Your name' }
+    = f.text_field :about, { placeholder: 'About you' }
+    = f.file_field :avatar
+    = f.text_field :address, { placeholder: 'Your address' }
+    = f.submit 'Create User Account', { class: 'btn orange' }
