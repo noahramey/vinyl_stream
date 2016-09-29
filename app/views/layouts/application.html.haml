@@ -9,6 +9,8 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     #wrapper
+      = flash[:notice]
+      = flash[:alert]
       %header#header.alt
         = link_to root_path, { class: 'logo' } do
           Vinyl<strong>Stream</strong>

@@ -1,19 +1,19 @@
 FactoryGirl.define do
   factory :account do
-    name "MyString"
-    address "MyString"
+    name "Bob"
+    address "123 Test Dr, Portland, OR"
     avatar ""
-    about "MyString"
-    user_id 1
+    about "testtesttest"
   end
   factory :item do
-    name "MyString"
-    description "MyString"
-    category "MyString"
+    name "Test Name"
+    description "Test Description"
+    category "Test Category"
     price 1.5
   end
   factory :user do
-    
+    email "test@test.com"
+    password "test1234"
   end
-  
+
 end
