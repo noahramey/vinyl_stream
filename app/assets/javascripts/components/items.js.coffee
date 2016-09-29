@@ -16,12 +16,15 @@
 
   render: ->
     React.DOM.div
-      className: 'items'
-      React.DOM.h2
-        className: 'title'
-        'Various Items'
-      React.createElement ItemForm, handleNewItem: @addItem
-      React.DOM.ul
-        className: 'collection'
-        for item in @state.items
-          React.createElement Item, key: item.id, item: item, handleDeleteItem: @deleteItem
+      className: 'items inner'
+      React.DOM.header
+        className: 'major'
+        React.DOM.h2 null,
+          'Shop'
+      React.DOM.div
+        className: 'content'
+        React.DOM.section null
+          for item in @state.items
+            React.createElement Item, key: item.id, item: item, handleDeleteItem: @deleteItem
+        React.DOM.hr null
+        React.createElement ItemForm, handleNewItem: @addItem
