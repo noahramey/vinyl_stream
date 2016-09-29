@@ -1,14 +1,27 @@
-%nav.grey.darken-1{:role => "navigation"}
-  .nav-wrapper.container
-    %a#logo-container.brand-logo.silver{:href => "#"} VinylStream
-    %ul.right.hide-on-med-and-down
-      %li
-        = link_to 'Items', items_path, { class: 'text-white'}
-    %ul#nav-mobile.side-nav
-      %li
-        = link_to 'Items', items_path, { class: 'text-white'}
-    %a.button-collapse{"data-activates" => "nav-mobile", :href => "#"}
-      %i.material-icons menu
-.row
-  .col.s12
-    = image_tag 'https://hd.unsplash.com/photo-1470229722913-7c0e2dbbafd3'
+%section#banner.major
+  .inner
+    %header.major
+      %h1 VinylStream.
+    .content
+      %p
+        An online retail experience to help you find
+        %br/
+        anything and everything music.
+      %ul.actions
+        %li
+          %a.button.next.scrolly{:href => "#one"} Get Started
+#main
+  %section#one.tiles
+    %article{style: 'background-image: url("https://images.unsplash.com/photo-1473261422289-ece70cf625d3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=eac54fed8a8989d9444caa9d06acaf20")'}
+      %span.image
+        = image_tag 'https://images.unsplash.com/photo-1474679294639-dc85e32f2ef0?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=97bfcfbdd233217a2f3c92ca7ec0ae11'
+      %header.major
+        %h3= link_to 'Sign Up', new_user_registration_path, { class: 'link'}
+        %p Create an account to start your experience
+      = link_to '', new_user_registration_path, { class: 'link primary' }
+    %article{style: 'background-image: url("https://hd.unsplash.com/5/unsplash-kitsune-4.jpg")'}
+      %span.image
+        = image_tag 'https://images.unsplash.com/photo-1474679294639-dc85e32f2ef0?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=97bfcfbdd233217a2f3c92ca7ec0ae11'
+      %header.major
+        %h3= link_to 'Shop', items_path, { class: 'link'}
+        %p Find music-related goods here

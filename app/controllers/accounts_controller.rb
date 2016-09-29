@@ -4,7 +4,12 @@ class AccountsController < ApplicationController
   end
 
   def new
-    @account = Account.new
+    if current_user
+      @account = Account.new
+    else
+      redirect_to root_path
+      flash[:notice] = "You must be signed up to create a profile."
+    end
   end
 
   def create

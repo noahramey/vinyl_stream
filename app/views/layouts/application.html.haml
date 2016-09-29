@@ -8,6 +8,20 @@
     = stylesheet_link_tag    'https://fonts.googleapis.com/icon?family=Material+Icons'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %p.notice= notice
-    %p.alert= alert
-    = yield
+    #wrapper
+      %header#header.alt
+        = link_to root_path, { class: 'logo' } do
+          Vinyl<strong>Stream</strong>
+        %nav
+          = link_to 'Home', root_path
+          = link_to 'Shop', items_path
+          - if current_user
+            -if current_user.account
+              = link_to 'My Profile', account_path(current_user.account)
+            - else
+              = link_to 'Create Profile', new_account_path
+            = link_to 'Sign Out', destroy_user_session_path, method: 'DELETE'
+          - else
+            = link_to "Sign Up", new_user_registration_path
+            = link_to "Sign In", user_session_path
+      = yield
