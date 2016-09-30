@@ -1,10 +1,14 @@
 # Vinyl Stream (Selling Everything Music)
 
-Started 9/22. I ran into quite a speedbump on my Spotify project. I found that I am unable to query the Spotify library based on a track's audio features (danceability, acousticness, etc.), and that defeats the purpose of recommendations. So I decided to pivot entirely. This project is a web application built using the React framework with a Rails backend. It could be used to buy and sell various music paraphernalia, such as albums, posters, vinyls, and more. I aim to have user authentication, ajax calls through react, and basic CRUD for my models done by the end of this weekend. (9/23 - 9/25) 
+A React / Rails Web Application designed to be used as an online retail store for music and music-related goods/services. All AJAX calls are made through React javascript components, and a Google Maps API is used to show the users location on their account page.
 
 ### User Stories
 
 * As a user, I want to be able to sign up for an account, sign in, and log out.
+
+* As a user, I want to be able to add a profile image to my account and see it on my account page.
+
+* As a user, I want to be able to add my address to my account and see it inside a Google Maps embedded player.
 
 * As a user, I want to be able to buy various items that are sorted by category.
 
@@ -39,6 +43,11 @@ $ bundle install
 Make sure Postgres is running on your local machine, then setup the database:
 ```
 $ rails db:setup db:test:prepare
+```
+
+Create a Google project at `https://console.developers.google.com` and create an API key. Once you have done this, create a .env file in your the project directory and insert the following code.
+```
+MAP_API_KEY=YOUR_API_KEY_HERE
 ```
 
 Start the Rails server.
