@@ -20,9 +20,11 @@ gem 'rails_admin_rollincode', '~> 1.0'
 gem 'rails_admin', '>= 1.0.0.rc'
 gem 'cancancan'
 gem 'react-rails'
+gem 'geocoder'
 
 group :development, :test do
   gem 'byebug', platform: :mri
+  gem 'dotenv-rails'
   gem 'rspec-rails'
   gem 'launchy'
   gem 'pry'

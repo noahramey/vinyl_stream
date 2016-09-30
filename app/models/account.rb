@@ -2,6 +2,9 @@ class Account < ApplicationRecord
   belongs_to :user
   has_many :items
 
+  geocoded_by :address
+  after_validation :geocode
+
   has_attached_file :avatar, styles: {
     thumb: '100x100>',
     square: '200x200#',

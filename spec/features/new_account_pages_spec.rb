@@ -4,7 +4,7 @@ describe "the create account path" do
   it "should create an account" do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
-    visit new_account_path
+    visit root_path
     fill_in 'account_name', with: 'Test'
     fill_in 'account_about', with: 'testtesttest'
     attach_file 'account_avatar', "spec/asset_specs/pictures/stage.jpeg"

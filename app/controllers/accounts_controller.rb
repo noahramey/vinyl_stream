@@ -1,4 +1,6 @@
 class AccountsController < ApplicationController
+  include AccountsHelper
+  
   def show
     @account = Account.find(params[:id])
   end

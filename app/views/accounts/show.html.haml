@@ -1,6 +1,5 @@
 #main
-  %section#one
-  %section#two.spotlights
+  %section#one.spotlights
     %section
       .image
         = image_tag @account.avatar.url
@@ -9,3 +8,5 @@
           %header.major
             %h3= @account.name
           %p= @account.about
+  %section#two
+    %iframe{width: "300", height: "300", frameborder: "0", style: "border:0", src:"https://www.google.com/maps/embed/v1/place?key=#{ENV['MAPS_API_KEY']}&q=#{@account.address}"}
