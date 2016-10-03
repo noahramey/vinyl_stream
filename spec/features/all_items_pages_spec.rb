@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'the items index path' do
-  it "should list all items if there are any" do
+  it "should list all items if there are any", js: true do
     user = FactoryGirl.create(:user)
     account = FactoryGirl.create(:account, user_id: user.id)
     item1 = FactoryGirl.create(:item, account_id: account.id)
