@@ -8,24 +8,30 @@
           %header.major
             %h3= @account.name
           %p= @account.about
-  %section#two
-    %iframe{width: "300", height: "300", frameborder: "0", style: "border:0", src:"https://www.google.com/maps/embed/v1/place?key=#{ENV['MAPS_API_KEY']}&q=#{@account.address}"}
+    %section
+      .image
+        %iframe{width: "420", height: "420", frameborder: "0", style: "border:0", src:"https://www.google.com/maps/embed/v1/place?key=#{ENV['MAPS_API_KEY']}&q=#{@account.address}"}
+      .content
+        .inner
+          %header.major
+            %h3 Temporary API Use
+          %p Here for code review only.
   %section#contact
     .inner
-      %section
+      %section#account-items
         - if @account.items.any?
           - @account.items.each do |item|
             %section
               .contact-method
-                %span.icon.alt.fa-envelope
                 %h3= item.name
                 %span= item.description
                 %br/
                 %span $#{item.price}
+                %hr
         - else
           %h4 This user has no available items for purchase.
       %section.split
-        = form_for Item.new do |f|
+        = form_for Item.new, :remote => true do |f|
           .field
             = f.label :name
             = f.text_field :name

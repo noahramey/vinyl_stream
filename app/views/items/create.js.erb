@@ -1,0 +1,5 @@
+$('#item_name').val('');
+$('#item_description').val('');
+$('#item_category').val('');
+$('#item_price').val('');
+$('#account-items').append('<section><div class="contact-method"><h3><%= @item.name %></h3><span><%= @item.description %></span><br><span>$<%= @item.price %></span></div></section>');

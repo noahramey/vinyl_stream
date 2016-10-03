@@ -8,7 +8,10 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     @item.account_id = @account.id
     if @item.save
-      redirect_to account_path(@account)
+      respond_to do |format|
+        format.html { redirect_to account_path(@account) }
+        format.js
+      end
     end
   end
 
