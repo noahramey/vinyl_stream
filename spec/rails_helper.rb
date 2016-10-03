@@ -8,6 +8,8 @@ require 'capybara/rails'
 require 'capybara/poltergeist'
 Capybara.javascript_driver = :poltergeist
 
+Capybara.raise_server_errors = false
+
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
