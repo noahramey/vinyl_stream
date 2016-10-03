@@ -16,8 +16,15 @@ class ItemsController < ApplicationController
   end
 
   def destroy
+    @account = current_user.account
     @item = Item.find(params[:id])
     @item.destroy
+
+    respond_to do |format|
+      format.html { redirect_to account_path(@account) }
+      format.json { head :no_content }
+      format.js { render :layout => false }
+    end
   end
 
   private

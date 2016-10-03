@@ -27,22 +27,26 @@
                 %span= item.description
                 %br/
                 %span $#{item.price}
+                - if @account == current_user.account
+                  %br/
+                  = link_to "Delete", item_path(item), method: 'delete', data: {confirm: "Delete this item?"}, class: 'button small delete_item', remote: true
                 %hr
         - else
           %h4 This user has no available items for purchase.
-      %section.split
-        = form_for Item.new, :remote => true do |f|
-          .field
-            = f.label :name
-            = f.text_field :name
-          .field
-            = f.label :description
-            = f.text_field :description
-          .field
-            = f.label :category
-            = f.text_field :category
-          .field
-            = f.label :price
-            = f.number_field :price, step: :any
-          .actions
-            = f.submit "Add Item Listing"
+      - if @account == current_user.account
+        %section.split
+          = form_for Item.new, :remote => true do |f|
+            .field
+              = f.label :name
+              = f.text_field :name
+            .field
+              = f.label :description
+              = f.text_field :description
+            .field
+              = f.label :category
+              = f.text_field :category
+            .field
+              = f.label :price
+              = f.number_field :price, step: :any
+            .actions
+              = f.submit "Add Item Listing"
