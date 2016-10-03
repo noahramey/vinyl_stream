@@ -4,19 +4,17 @@ class ItemsController < ApplicationController
   end
 
   def create
+    @account = current_user.account
     @item = Item.new(item_params)
-    @item.account_id = current_user.account.id
+    @item.account_id = @account.id
     if @item.save
-      render json: @item
-    else
-      render json: @item.errors, status: :unprocessable_entity
+      redirect_to account_path(@account)
     end
   end
 
   def destroy
     @item = Item.find(params[:id])
     @item.destroy
-    head :no_content
   end
 
   private

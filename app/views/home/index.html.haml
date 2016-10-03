@@ -9,7 +9,7 @@
         anything and everything music.
       %ul.actions
         %li
-          %a.button.next.scrolly{:href => "#one"} Get Started
+          = link_to "Get Started", items_path, { class: 'button next' }
 #main
   %section#one.tiles
     %article{style: 'background-image: url("https://images.unsplash.com/photo-1473261422289-ece70cf625d3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=eac54fed8a8989d9444caa9d06acaf20")'}
