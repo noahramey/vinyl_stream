@@ -1,6 +1,6 @@
 # Vinyl Stream (Selling Everything Music)
 
-A React / Rails Web Application designed to be used as an online retail store for music and music-related goods/services. All AJAX calls are made through React javascript components, and a Google Maps API is used to show the users location on their account page.
+A Rails Web Application designed to be used as an online retail store for music and music-related goods/services. A Google Maps API is used to show the users location on their account page. AJAX calls are made via the account page.
 
 ### User Stories
 
