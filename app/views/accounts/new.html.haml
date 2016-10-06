@@ -1,8 +1,20 @@
 .container
-  %h3 Fill in the following information.
-  = form_for(@account, mutlipart: true) do |f|
-    = f.text_field :name, { placeholder: 'Your name' }
-    = f.text_field :about, { placeholder: 'About you' }
-    = f.file_field :avatar
-    = f.text_field :address, { placeholder: 'Your address' }
-    = f.submit 'Create User Account', { class: 'btn orange' }
+  .inner
+    %header.major
+      %h3 Fill in the following information to create an account.
+    .content
+      = form_for(@account, mutlipart: true) do |f|
+        .field
+          = f.label :name
+          = f.text_field :name
+        .field
+          = f.label :about
+          = f.text_field :about
+        .field
+          = f.label :avatar
+          = f.file_field :avatar
+        .field
+          = f.label :address
+          = f.text_field :address
+        .actions
+          = f.submit 'Create User Account', { class: 'button special' }
