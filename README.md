@@ -1,6 +1,6 @@
 # Vinyl Stream (Selling Everything Music)
 
-A Rails Web Application designed to be used as an online retail store for music and music-related goods/services. A Google Maps API is used to show the users location on their account page. AJAX calls are made via the account page.
+A Rails Web Application designed to be used as an online retail store for music and music-related goods/services. A Google Maps API is used to show the users location on their account page. AJAX calls are made via the account page. Over the coming weeks, I will be adding features for user messaging, shopping carts, and checkout.
 
 ### User Stories
 
@@ -27,6 +27,8 @@ A Rails Web Application designed to be used as an online retail store for music 
 * ...
 
 ### Installation and Running Locally
+
+* If you do not want to install and instead want to view a live version of the site, you can find it here: `https://vinylstream.herokuapp.com`
 
 Open Terminal and clone the repository.  
 ```

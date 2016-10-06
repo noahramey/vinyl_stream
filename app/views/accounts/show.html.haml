@@ -29,7 +29,8 @@
                 %span $#{item.price}
                 - if @account == current_user.account
                   %br/
-                  = link_to "Delete", item_path(item), method: 'delete', data: {confirm: "Delete this item?"}, class: 'button small delete_item', remote: true
+                  = link_to "Delete", item_path(item), method: 'delete', data: {confirm: "Delete this item?"}, class: 'button small delete_item', remote: true, style: 'float:right'
+                  %br
                 %hr
         - else
           %h4 This user has no available items for purchase.
