@@ -22,8 +22,6 @@ class ItemsController < ApplicationController
     @item.cart_id = @account.cart.id
     if @item.save
       redirect_to account_path(@account)
-    else
-      render :show
     end
   end
 
