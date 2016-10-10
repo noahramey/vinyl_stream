@@ -15,6 +15,17 @@ class ItemsController < ApplicationController
     end
   end
 
+  def update
+    @account = current_user.account
+    @item = Item.find(params[:id])
+    @item.cart_id = @account.cart.id
+    if @item.save
+      redirect_to account_path(@account)
+    else
+      render :show
+    end
+  end
+
   def destroy
     @account = current_user.account
     @item = Item.find(params[:id])

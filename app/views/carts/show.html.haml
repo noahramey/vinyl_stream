@@ -1,0 +1,16 @@
+.container
+  .cart.inner
+    %header.major
+      %h2 Cart
+    .content
+      - if @cart.items.any?
+        - @cart.items.each do |item|
+          .contact-method
+            %h3= item.name
+            %span= item.description
+            %br/
+            %span $#{item.price}
+          %br/
+          %h4= @cart.total
+      - else
+        %h4 There are no items in your cart.

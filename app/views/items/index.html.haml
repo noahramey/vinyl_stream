@@ -11,5 +11,7 @@
             %span= item.description
             %br/
             %span $#{item.price}
+            %br/
+            = link_to "Add to Cart", item_path(item), method: 'patch', class: 'button small special'
       - else
         %h4 There are no items available for purchase at this time. Try again later.

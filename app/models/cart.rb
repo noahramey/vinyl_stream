@@ -9,10 +9,11 @@ class Cart < ApplicationRecord
     self.items.each do |item|
       subtotal += item.price
     end
+    "Cart total: $" + subtotal.to_s
   end
 
 private
   def update_total
-    self[:total] = total
+    self.total
   end
 end
