@@ -2,15 +2,13 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Vinylstream
+    %title= flash[:title]
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag    'https://fonts.googleapis.com/icon?family=Material+Icons'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     #wrapper
-      = flash[:notice]
-      = flash[:alert]
       %header#header.alt
         = link_to root_path, { class: 'logo' } do
           Vinyl<strong>Stream</strong>
@@ -28,4 +26,6 @@
           - else
             = link_to "Sign Up", new_user_registration_path
             = link_to "Sign In", user_session_path
+      = flash[:notice]
+      = flash[:alert]
       = yield

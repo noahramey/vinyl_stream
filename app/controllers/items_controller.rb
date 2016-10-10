@@ -1,5 +1,6 @@
 class ItemsController < ApplicationController
   def index
+    flash[:title] = "Shop - VinylStream"
     @items = Item.all
   end
 

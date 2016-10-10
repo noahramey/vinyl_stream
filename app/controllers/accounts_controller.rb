@@ -1,9 +1,11 @@
-class AccountsController < ApplicationController  
+class AccountsController < ApplicationController
   def show
     @account = Account.find(params[:id])
+    flash[:title] = "#{@account.name} - VinylStream"
   end
 
   def new
+    flash[:title] = "Create Account - VinylStream"
     if current_user
       @account = Account.new
     else
