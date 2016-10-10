@@ -20,6 +20,8 @@
           - if current_user
             -if current_user.account
               = link_to 'My Profile', account_path(current_user.account)
+              = link_to root_path do
+                Cart (#{current_user.account.cart.items.length})
             - else
               = link_to 'Create Profile', new_account_path
             = link_to 'Sign Out', destroy_user_session_path, method: 'DELETE'
