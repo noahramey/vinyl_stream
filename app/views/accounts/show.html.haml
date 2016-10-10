@@ -8,14 +8,6 @@
           %header.major
             %h3= @account.name
           %p= @account.about
-    %section
-      .image
-        %iframe{width: "420", height: "420", src:"https://www.google.com/maps/embed/v1/place?key=#{ENV['MAPS_API_KEY']}&q=#{@account.address}&zoom=15"}
-      .content
-        .inner
-          %header.major
-            %h3 Temporary API Use
-          %p Here for code review only.
   %section#contact
     .inner
       %section#account-items

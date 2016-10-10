@@ -1,4 +1,7 @@
 FactoryGirl.define do
+  factory :cart do
+    total "9.99"
+  end
   factory :account do
     name "Bob"
     address "123 Test Dr, Portland, OR"
