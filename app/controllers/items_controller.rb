@@ -19,9 +19,16 @@ class ItemsController < ApplicationController
   def update
     @account = current_user.account
     @item = Item.find(params[:id])
-    @item.cart_id = @account.cart.id
+    if @item.cart_id
+      @item.cart_id = nil
+    else
+      @item.cart_id = @account.cart.id
+    end
     if @item.save
-      redirect_to account_path(@account)
+      respond_to do |format|
+        format.html { redirect_to items_path }
+        format.js
+      end
     end
   end
 
