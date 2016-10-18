@@ -1,1 +1,2 @@
-('#items-partial').html("<%= j (render 'items') %>");
+$('.cart-items').html("<%= @account.cart.items.length %>");
+$('#items-partial').html("<%= j render(partial: 'items') %>");

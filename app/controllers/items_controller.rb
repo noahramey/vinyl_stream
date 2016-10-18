@@ -25,6 +25,7 @@ class ItemsController < ApplicationController
       @item.cart_id = @account.cart.id
     end
     if @item.save
+      @items = Item.all
       respond_to do |format|
         format.html { redirect_to items_path }
         format.js

@@ -9,8 +9,8 @@
       %br/
       - if item.account != current_user.account
         - if item.cart_id
-          = link_to "Remove from Cart", item_path(item), method: 'patch', class: 'button small special'
+          = link_to "Remove from Cart", item_path(item), method: 'patch', class: 'button small special', remote: true
         - else
-          = link_to "Add to Cart", item_path(item), method: 'patch', class: 'button small'
+          = link_to "Add to Cart", item_path(item), method: 'patch', class: 'button small', remote: true
 - else
   %h4 There are no items available for purchase at this time. Try again later.
