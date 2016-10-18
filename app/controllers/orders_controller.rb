@@ -11,4 +11,5 @@ class OrdersController < ApplicationController
       item.update(order_id: @order.id)
     end
     redirect_to order_path(@order)
+  end
 end

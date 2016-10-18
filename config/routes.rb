@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :accounts
   resources :items
   resources :carts, :only => [:show]
+  resources :orders, :only => [:show, :create]
   root :to => "home#index"
 
   resources :home, :only => [:index]
