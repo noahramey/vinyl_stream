@@ -11,7 +11,7 @@
             %br/
             %span $#{item.price}
           %br/
-        %h4= @cart.total
+        %h4 Total comes to $#{@cart.total}
       - else
         %h4 There are no items in your cart.
     = link_to 'Checkout', orders_path, method: 'POST', class: 'button small'

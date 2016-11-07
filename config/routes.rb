@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :orders, :only => [:show, :create]
   root :to => "home#index"
 
+  post "/hook" => "orders#hook"
+
   resources :home, :only => [:index]
 
   devise_for :users
