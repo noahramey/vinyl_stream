@@ -1,4 +1,4 @@
-# Vinyl Stream (Selling Everything Music)
+# Vinyl Stream
 
 A Rails Web Application designed to be used as an online retail store for music and music-related goods/services. Transactions are processed using PayPal.
 
