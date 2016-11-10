@@ -1,30 +1,6 @@
 # Vinyl Stream (Selling Everything Music)
 
-A Rails Web Application designed to be used as an online retail store for music and music-related goods/services. A Google Maps API is used to show the users location on their account page. AJAX calls are made via the account page. Over the coming weeks, I will be adding features for user messaging, shopping carts, and checkout.
-
-### User Stories
-
-* As a user, I want to be able to sign up for an account, sign in, and log out.
-
-* As a user, I want to be able to add a profile image to my account and see it on my account page.
-
-* As a user, I want to be able to add my address to my account and see it inside a Google Maps embedded player.
-
-* As a user, I want to be able to buy various items that are sorted by category.
-
-* As a user, I want to be able to search for items by keyword.
-
-* As a user, I want to be able to add items to a shopping cart for mass checkout.
-
-* As a user, I want to be able to checkout and have the site email me a confirmation of my order.
-
-* As a user, I want to be able to put up items for sale and have a dashboard where I can see my sales/orders.
-
-* As an admin, I want to be able to see all of the users who use my website.
-
-* As an admin, I want to be able to see all items up for sale, along with orders between other users.
-
-* ...
+A Rails Web Application designed to be used as an online retail store for music and music-related goods/services. Transactions are processed using PayPal.
 
 ### Installation and Running Locally
 
